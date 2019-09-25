@@ -126,7 +126,7 @@ Licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/
 The following files:
 
 * SlidingTabLayout.java
-* SlidingTabStrip.java 
+* SlidingTabStrip.java
 
 are Copyright (C) 2013 The Android Open Source Project and are licensed under the Apache License, Version 2.0
 
