@@ -279,10 +279,10 @@ public class SlideDateTimeDialogFragment extends DialogFragment implements DateF
      */
     @Override
     public void onTimeChanged(int hour, int minute) {
-        mCalendar.set(Calendar.HOUR_OF_DAY, hour);
-        mCalendar.set(Calendar.MINUTE, minute);
-
-        updateTimeTab();
+//        mCalendar.set(Calendar.HOUR_OF_DAY, hour);
+//        mCalendar.set(Calendar.MINUTE, minute);
+//
+//        updateTimeTab();
     }
 
     private void updateDateTab() {
@@ -352,13 +352,13 @@ public class SlideDateTimeDialogFragment extends DialogFragment implements DateF
                     });
                     return dateFragment;
                 case 1:
-//                    TimeFragment timeFragment = TimeFragment.newInstance(
-//                            mTheme,
-//                            mCalendar.get(Calendar.HOUR_OF_DAY),
-//                            mCalendar.get(Calendar.MINUTE),
-//                            mIsClientSpecified24HourTime,
-//                            mIs24HourTime);
-//                    return timeFragment;
+                    TimeFragment timeFragment = TimeFragment.newInstance(
+                            mTheme,
+                            mCalendar.get(Calendar.HOUR_OF_DAY),
+                            mCalendar.get(Calendar.MINUTE),
+                            mIsClientSpecified24HourTime,
+                            mIs24HourTime);
+                    return timeFragment;
                 default:
                     return null;
             }

@@ -121,14 +121,14 @@ public class TimeFragment extends Fragment
         mTimePicker = (TimePicker) v.findViewById(R.id.timePicker);
         // block keyboard popping up on touch
         mTimePicker.setDescendantFocusability(DatePicker.FOCUS_BLOCK_DESCENDANTS);
-        mTimePicker.setOnTimeChangedListener(new TimePicker.OnTimeChangedListener() {
-
-            @Override
-            public void onTimeChanged(TimePicker view, int hourOfDay, int minute)
-            {
-                mCallback.onTimeChanged(hourOfDay, minute);
-            }
-        });
+//        mTimePicker.setOnTimeChangedListener(new TimePicker.OnTimeChangedListener() {
+//
+//            @Override
+//            public void onTimeChanged(TimePicker view, int hourOfDay, int minute)
+//            {
+//                mCallback.onTimeChanged(hourOfDay, minute);
+//            }
+//        });
 
         // If the client specifies a 24-hour time format, set it on
         // the TimePicker.
@@ -190,9 +190,9 @@ public class TimeFragment extends Fragment
                             mTimePicker.setCurrentHour(mTimePicker.getCurrentHour() - 12);
                     }
 
-                    mCallback.onTimeChanged(
-                        mTimePicker.getCurrentHour(),
-                        mTimePicker.getCurrentMinute());
+//                    mCallback.onTimeChanged(
+//                        mTimePicker.getCurrentHour(),
+//                        mTimePicker.getCurrentMinute());
                 }
             });
         }
